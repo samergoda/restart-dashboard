@@ -13,9 +13,9 @@ export default function ProductCard({ product }: { product: Product }) {
         <Image
           src={product.image}
           alt={product.name}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-t-lg"
+          width={200}
+          height={0}
+          className="object-cover w-full h-full"
         />
       </div>
       <div className="p-4">
