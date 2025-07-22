@@ -14,7 +14,7 @@ export default function NavLinks({ isOpen }: { isOpen: boolean }) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 z-50 items-start flex flex-col justify-between  h-auto  w-64 bg-blue-700 p-4 transition-transform duration-300
+      className={`fixed top-0 left-0 z-50 items-start flex flex-col justify-between min-h-dvh h-auto  w-64 bg-blue-700 p-4 transition-transform duration-300
         ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:static md:flex`}
     >
       {/* Nav container */}
