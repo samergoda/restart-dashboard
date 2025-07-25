@@ -201,25 +201,3 @@ export default function ProductForm({
     </Dialog>
   );
 }
-
-// Usage Examples:
-//
-// 1. Add new product:
-// <ProductForm />
-//
-// 2. Add new product with custom trigger text:
-// <ProductForm triggerText="Create New Product" />
-//
-// 3. Edit existing product:
-// <ProductForm
-//   product={existingProduct}
-//   triggerText="Edit Product"
-// />
-//
-// 4. With custom submit handler:
-// <ProductForm
-//   onSubmit={(productData) => {
-//     // Custom logic here
-//     console.log('Product submitted:', productData);
-//   }}
-// />

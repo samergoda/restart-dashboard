@@ -3,9 +3,15 @@
 import { useProducts } from "@/components/context/ProductsContext";
 import ProductCard from "../../../components/common/product-card";
 import AddProduct from ".././_components/product-actions";
+import { useEffect } from "react";
 
-export default function ProductListing() {
-  const { products } = useProducts();
+export default function ProductListing({ products }: { products: Product[] }) {
+  const { products: payload, setInitialProducts } = useProducts();
+
+  // Set products as initial value when render one time
+  useEffect(() => {
+    setInitialProducts(products);
+  }, [products]);
 
   return (
     <div className="container mx-auto p-4">
@@ -19,7 +25,7 @@ export default function ProductListing() {
 
       {/* Product listing */}
       <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {products.map((product: Product) => (
+        {payload.map((product: Product) => (
           // Product card
           <ProductCard key={product.id} product={product} />
         ))}
