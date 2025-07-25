@@ -11,7 +11,7 @@ export default function Sidenav() {
   return (
     <>
       {/* Mobile toggle button */}
-      <div className="md:hidden p-3 bg-blue-700  h-auto  text-white flex justify-between items-center">
+      <div className="md:hidden min-h-dvh p-3 bg-blue-700  h-auto  text-white flex justify-between items-center">
         <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
           {isOpen ? <IoClose size={24} /> : <FiMenu size={24} />}
         </button>
